@@ -38,11 +38,8 @@ The dataset included entries on clinical trials related to diabetes, with featur
 
 ## Challenges and Solutions
 
-- **Challenge 1: Inconsistencies in Categorical Data**: Categorical data, especially in the 'Sex' and 'Trial Group' columns, had inconsistencies in representation.
-  - **Solution**: Applied standardization techniques and One-Hot Encoding to ensure uniformity and prepare the data for machine learning models.
-
-- **Challenge 2: Handling Missing Data**: Identifying and addressing missing data was crucial to avoid biases in the analysis.
-  - **Solution**: Performed an initial assessment to quantify missingness, laying the groundwork for targeted imputation strategies in future work.
+- **Challenge: Handling Missing Data**: The primary challenge involved missing biomarker data and outliers in drug doses. Addressing these issues was critical due to their significance in clinical trial analysis.
+- **Solution**: Performed an initial assessment to quantify missingness. Applying domain knowledge, outliers in durg doses were replaced with NaN. Then imputed with median (considering a skewed distribution). KNN was used to fill in the small number of missing biomarkers. 
 
 ## Key Findings and Results
 
